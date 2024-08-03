@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecuaviajes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Nuevo encabezado -->
+    <header class="header">
+        <p class="text-light mb-0 p-2 fs-6">BIENVENIDOS TRIPULANTES</p>
+    </header>
+
+    <!-- Nueva barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light p-3" id="menu">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="fs-5 text-primary fw-bold">ECU VIAJE</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinos.html">Destino</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="noticias.html">Noticias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Reserva.html">Cotiza tu Viaje</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="conocenos.html">Sobre Nosotros</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="ciudad" placeholder="Busca tu ciudad" aria-label="BUSCAR">
+                    <button class="btn btn-primary btn-primary-outline-success" type="button">BUSCAR</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <h2 class="title">DESTINOS</h2>
+
+    <div class="destinos">
+        <div class="destino">
+            <img src="img/inglaterra.jpg" alt="Inglaterra">
+            <div class="info">
+                <a href="#">Inglaterra</a>
+                <p>4 tours</p>
+                <button><a href="Reserva.html">Reservar</a></button>
+                <button onclick="openModal('Inglaterra')">Leer más</button>
+            </div>
+            <!-- Modal para Inglaterra -->
+            <div id="myModalInglaterra" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalInglaterra')">&times;</span>
+                    <h2 id="modal-titleInglaterra">Inglaterra</h2>
+                    <p id="modal-contentInglaterra"> Conocida por sus icónicos monumentos como el Big Ben, el Palacio de Buckingham y la Torre de Londres. También famosa por sus universidades de renombre como Oxford y Cambridge, y sus pintorescos paisajes rurales.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/paris2.jpg" alt="Paris">
+            <div class="info">
+                <a href="#">Paris</a>
+                <p>7 tours</p>
+                <button><a href="Reserva.html">Reservar</a></button>
+                <button onclick="openModal('Paris')">Leer más</button>
+            </div>
+            <!-- Modal para Paris -->
+            <div id="myModalParis" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalParis')">&times;</span>
+                    <h2 id="modal-titleParis">Paris</h2>
+                    <p id="modal-contentParis"> La Ciudad del amor es famosa por la Torre Eiffel, el Louvre, Notre Dame y el ambiente romántico de sus calles y cafés.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/dubai.jpg" alt="Dubai">
+            <div class="info">
+                <a href="#">Dubai</a>
+                <p>1 tour</p>
+                <button><a href="Reserva.html">Reservar</a></button>
+                <button onclick="openModal('Dubai')">Leer más</button>
+            </div>
+            <!-- Modal para Dubai -->
+            <div id="myModalDubai" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalDubai')">&times;</span>
+                    <h2 id="modal-titleDubai">Dubai</h2>
+                    <p id="modal-contentDubai">Conocida por sus rascacielos impresionantes como el Burj Khalifa, centros comerciales de lujo como el Dubai Mall, y actividades como safaris por el desierto y parques acuáticos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/mexico.jpg" alt="Mexico">
+            <div class="info">
+                <a href="#">Mexico</a>
+                <p>4 tours</p>
+                <button><a href="Reserva.html">Reservar</a></button>
+                <button onclick="openModal('Mexico')">Leer más</button>
+            </div>
+            <!-- Modal para Mexico -->
+            <div id="myModalMexico" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalMexico')">&times;</span>
+                    <h2 id="modal-titleMexico">Mexico</h2>
+                    <p id="modal-contentMexico">Famoso por sus antiguas pirámides como las de Teotihuacán y Chichén Itzá, sus playas de arena blanca en Cancún y Riviera Maya, y su vibrante cultura que incluye mariachis y la festividad del Día de los Muertos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/corea.jpg" alt="Corea del Sur">
+            <div class="info">
+                <a href="#">Corea del Sur</a>
+                <p>3 tours</p>
+                <button><a href="Reserva.html">Reservar</a></button>
+                <button onclick="openModal('Corea')">Leer más</button>
+            </div>
+            <!-- Modal para Corea del Sur -->
+            <div id="myModalCorea" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalCorea')">&times;</span>
+                    <h2 id="modal-titleCorea">Corea del Sur</h2>
+                    <p id="modal-contentCorea">Destaca por su mezcla de tradición y modernidad con lugares como el palacio Gyeongbokgung en Seúl, la moderna ciudad de Busan, y la cultura del K-pop y los dramas coreanos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/suecia.jpg" alt="Suecia">
+            <div class="info">
+                <a href="#">Suecia</a>
+                <p>5 tours</p>
+                <button><a href="Reserva.html">Reservar</a></button>
+                <button onclick="openModal('Suecia')">Leer más</button>
+            </div>
+            <!-- Modal para Suecia -->
+            <div id="myModalSuecia" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalSuecia')">&times;</span>
+                    <h2 id="modal-titleSuecia">Suecia</h2>
+                    <p id="modal-contentSuecia"> Conocida por su diseño minimalista, Estocolmo ofrece el Museo Vasa y el
+                        Palacio Real. La región de Laponia es ideal para ver auroras boreales y disfrutar del aire
+                        libre.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/quito2.jpg" alt="Quito">
+            <div class="info">
+                <a href="#">Quito</a>
+                <p>2 tours</p>
+                <button><a href="Reserva.html">Reservar</a></button>
+                <button onclick="openModal('Quito')">Leer más</button>
+            </div>
+            <!-- Modal para Quito -->
+            <div id="myModalQuito" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalQuito')">&times;</span>
+                    <h2 id="modal-titleQuito">Quito</h2>
+                    <p id="modal-contentQuito">La capital de Ecuador, ubicada en la cordillera de los Andes, conocida por su bien preservado centro histórico y sus vistas del volcán Pichincha.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/guayaquil.jpg" alt="Guayaquil">
+            <div class="info">
+                <a href="#">Guayaquil</a>
+                <p>1 tour</p>
+                <button><a href="Reserva.html">Reservar</a></button>
+                <button onclick="openModal('Guayaquil')">Leer más</button>
+            </div>
+            <!-- Modal para Guayaquil -->
+            <div id="myModalGuayaquil" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalGuayaquil')">&times;</span>
+                    <h2 id="modal-titleGuayaquil">Guayaquil</h2>
+                    <p id="modal-contentGuayaquil">La ciudad más grande de Ecuador, situada junto al río Guayas y conocida por su malecón 2000, su arquitectura moderna y su clima tropical.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/cuenca.png" alt="Cuenca">
+            <div class="info">
+                <a href="#">Cuenca</a>
+                <p>1 tour</p>
+                <button><a href="Reserva.html">Reservar</a></button>
+                <button onclick="openModal('Cuenca')">Leer más</button>
+            </div>
+            <!-- Modal para Cuenca -->
+            <div id="myModalCuenca" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalCuenca')">&times;</span>
+                    <h2 id="modal-titleCuenca">Cuenca</h2>
+                    <p id="modal-contentCuenca">Conocida por su centro histórico, que es Patrimonio de la Humanidad por la UNESCO, y su arquitectura colonial española.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/otavalo.png" alt="Otavalo">
+            <div class="info">
+                <a href="#">Otavalo</a>
+                <p>2 tours</p>
+                <button><a href="Reserva.html">Reservar</a></button>
+                <button onclick="openModal('Otavalo')">Leer más</button>
+            </div>
+            <!-- Modal para Otavalo -->
+            <div id="myModalOtavalo" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalOtavalo')">&times;</span>
+                    <h2 id="modal-titleOtavalo">Otavalo</h2>
+                    <p id="modal-contentOtavalo">Famoso por su mercado de artesanías, uno de los más grandes de América Latina, y sus alrededores pintorescos con lagos y montañas.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/mitad del mundo.jpg" alt="Mitad del Mundo">
+            <div class="info">
+                <a href="#">Mitad del Mundo</a>
+                <p>7 tour</p>
+                <button><a href="Reserva.html">Reservar</a></button>
+                <button onclick="openModal('MitadDelMundo')">Leer más</button>
+            </div>
+            <!-- Modal para Mitad del Mundo -->
+            <div id="myModalMitadDelMundo" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalMitadDelMundo')">&times;</span>
+                    <h2 id="modal-titleMitadDelMundo">Mitad del Mundo</h2>
+                    <p id="modal-contentMitadDelMundo">Ubicada cerca de Quito, este lugar marca la línea ecuatorial donde se puede estar en ambos hemisferios a la vez. Tiene un monumento y un museo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/cotopaxi.jpg" alt="Cotopaxi">
+            <div class="info">
+                <a href="#">Cotopaxi</a>
+                <p>1 tour</p>
+                <button><a href="Reserva.html">Reservar</a></button>
+                <button onclick="openModal('Cotopaxi')">Leer más</button>
+            </div>
+            <!-- Modal para Cotopaxi -->
+            <div id="myModalCotopaxi" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalCotopaxi')">&times;</span>
+                    <h2 id="modal-titleCotopaxi">Cotopaxi</h2>
+                    <p id="modal-contentCotopaxi">Un impresionante volcán y parque nacional en Ecuador, ideal para el senderismo y la escalada, con una rica biodiversidad.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/misahualli.jpg" alt="Misahualli">
+            <div class="info">
+                <a href="#">Misahualli</a>
+                <p>1 tour</p>
+                <button><a href="Reserva.html">Reservar</a></button>
+                <button onclick="openModal('Misahualli')">Leer más</button>
+            </div>
+            <!-- Modal para Misahualli -->
+            <div id="myModalMisahualli" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalMisahualli')">&times;</span>
+                    <h2 id="modal-titleMisahualli">Misahualli</h2>
+                    <p id="modal-contentMisahualli"> Un pequeño pueblo en la Amazonía ecuatoriana, conocido por sus playas fluviales y sus encuentros con monos capuchinos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/baños.jpg" alt="Baños">
+            <div class="info">
+                <a href="#">Baños</a>
+                <p>2 tours</p>
+                <button><a href="Reserva.html">Reservar</a></button>
+                <button onclick="openModal('Baños')">Leer más</button>
+            </div>
+            <!-- Modal para Baños -->
+            <div id="myModalBaños" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalBaños')">&times;</span>
+                    <h2 id="modal-titleBaños">Baños</h2>
+                    <p id="modal-contentBaños">Famoso por su laguna y playa de arena rosa, un lugar paradisíaco en la isla de Creta, Grecia.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destino">
+            <img src="img/galapagos.jpg" alt="Galápagos">
+            <div class="info">
+                <a href="#">Galápagos</a>
+                <p>4 tours</p>
+                <button><a href="Reserva.html">Reservar</a></button>
+                <button onclick="openModal('Galapagos')">Leer más</button>
+            </div>
+            <!-- Modal para Galápagos -->
+            <div id="myModalGalapagos" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('myModalGalapagos')">&times;</span>
+                    <h2 id="modal-titleGalapagos">Galápagos</h2>
+                    <p id="modal-contentGalapagos"> Un archipiélago volcánico en el Océano Pacífico, famoso por su biodiversidad única y su papel en la teoría de la evolución de Darwin.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <hr>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <h5 class="mb-3">Necesitas Ayuda?</h5>
+            <ul class="list-unstyled">
+                <li><a href="#">Llamanos</a></li>
+                <li><a href="#">Escríbenos</a></li>
+                <li><a href="#">Contáctance</a></li>
+                <li><a href="#">ecuaviajes@epn.com.ec</a></li>
+                <li><a href="#">Siguenos</a></li>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h5 class="mb-3">La Empresa</h5>
+            <ul class="list-unstyled">
+                <li><a href="#">Vuelos</a></li>
+                <li><a href="#">Destinos</a></li>
+                <li><a href="#">Conócenos</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h5 class="mb-3">Ayuda</h5>
+            <ul class="list-unstyled">
+                <li><a href="#">FAQS</a></li>
+                <li><a href="#">Contatos</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Política de protección de Datos</a></li>
+                <li><a href="#">Política de cookies</a></li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-12 text-center">
+            <p>Todos los derechos reservados a Ecuaviajes</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(destino) {
+            var modal = document.getElementById('myModal' + destino);
+            modal.style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
